@@ -1,0 +1,31 @@
+{
+  "name": "TeslaBleHttpProxy",
+  "version": "0.0.1",
+  "slug": "teslablehttpproxy",
+  "description": "Proxy between Bluetooth LE Tesla control API and REST",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "url": "https://github.com/KastB/addon-tesla-ble-http-proxy",
+  "startup": "services",
+  "boot": "auto",
+  "panel_icon": "mdi:home-floor-l",
+  "panel_title": "TeslaBleHttpProxy",
+  "uart": false,
+  "gpio": false,
+  "map": ["config:rw"],
+  "host_network": false,
+  "ingress": true,
+  "privileged": true,
+  "init": false,
+  "devices": [
+    "/var/run/dbus:/var/run/dbus:rwm"
+  ],
+  "ports": {
+    "8080/tcp": 8080
+  },
+  "options": {
+    "logLevel": "info"
+  },
+  "schema": {
+    "logLevel": "str?"
+  }
+}
