@@ -1,17 +1,9 @@
 {
   "build_from": {
-    "aarch64": "golang:alpine",
-    "amd64": "golang:alpine",
-    "armv7": "golang:alpine",
-    "armhf": "golang:alpine",
-    "i386": "golang:alpine"
-  },
-  "build_args": {
-    "BUILDPLATFORM": "linux/amd64"
-  },
-  "dockerfile": "Dockerfile",
-  "args": {
-    "TARGETOS": "linux",
-    "TARGETARCH": "amd64"
+    "aarch64": "arm64v8/golang:alpine",
+    "amd64": "amd64/golang:alpine",
+    "armv7": "arm32v7/golang:alpine",
+    "armhf": "armhf/golang:alpine",
+    "i386": "i386/golang:alpine"
   }
 }
